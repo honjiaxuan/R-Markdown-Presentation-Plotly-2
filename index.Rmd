@@ -1,0 +1,24 @@
+---
+title: "Week 3 Assignment"
+author: "Sean"
+date: "December 5, 2016"
+output: ioslides_presentation
+---
+
+### Week 3 Assignment
+
+
+```{r setup, include=FALSE}
+library(plotly)
+```
+
+## Plot_ly
+
+We will use **airquality** dataset to present the relationship of solar, wind and temporature. On the upper right side, we have month as factor. We can filter the month and check their scatter plot in 3D dimension.
+ 
+
+```{r cars, echo = F}
+plot_ly(airquality, x= Solar.R, y=Wind, z=Temp, 
+         type = 'scatter3d', mode='markers', color=as.factor(Month))
+```
+ 
